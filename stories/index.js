@@ -131,7 +131,7 @@ storiesOf("Button", module)
           <InterviewerList
             interviewers={interviewers}
             interviewer={3}
-            setInterviewer={action("setInterviewer")}
+            setInterviewer={action("onChange")}
           />
         ));
 
