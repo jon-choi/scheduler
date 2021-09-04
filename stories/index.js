@@ -171,7 +171,7 @@ storiesOf("Button", module)
               <Appointment id="last" time="1pm" />
             </Fragment>
           ))
-          .add("Appointment Booked", () => (
+        .add("Appointment Booked", () => (
             <Fragment>
               <Appointment
                 id={1}
