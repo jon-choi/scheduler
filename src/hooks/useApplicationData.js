@@ -40,7 +40,7 @@ export default function useApplicationData() {
       [id]: appointment
     };
 
-    const days = state.days.map((item, index) => {
+    const days = state.days.map((item) => {
       if (item.appointments.includes(id)) {
         item.spots --
         return item
@@ -69,7 +69,7 @@ export default function useApplicationData() {
       [id]: nullAppointment
     };
 
-    const days = state.days.map((item, index) => {
+    const days = state.days.map((item) => {
       if (item.appointments.includes(id)) {
         item.spots ++
         return item
