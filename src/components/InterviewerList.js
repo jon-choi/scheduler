@@ -27,7 +27,7 @@ export default function InterviewerList(props) {
   )
 };
 
-InterviewerListItem.PropTypes = {
+InterviewerList.propTypes = {
   value: PropTypes.number,
   onChange: PropTypes.func.isRequired
 };
