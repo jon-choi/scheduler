@@ -49,3 +49,6 @@ npm test
 npm run storybook
 ```
 ## Final Product 
+!["Demo of features"](https://github.com/jon-choi/scheduler/blob/master/docs/InterviewSchedulerDemo.gif?raw=true)
+
+    The included GIF demonstrates the app as a user runs through available features.
