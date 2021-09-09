@@ -21,6 +21,7 @@ export default function Appointment(props) {
   const EDIT = "EDIT";
   const ERROR_SAVE = "ERROR_SAVE";
   const ERROR_DELETE = "ERROR_DELETE";
+  const ERROR_NO_INFO = "ERROR NO INFO";
 
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
@@ -34,11 +35,16 @@ export default function Appointment(props) {
       interviewer,
     };
 
-    props
+    if(!interview.interviewer) {
+      transition (ERROR_NO_INFO, true)
+    } else {
+      props
       .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
       .catch((error) => transition(ERROR_SAVE, true));
-  }
+      }
+    }
+    
 
   function confirmation() {
     transition(CONFIRM);
@@ -99,6 +105,9 @@ export default function Appointment(props) {
       )}
       {mode === ERROR_SAVE && (
         <Error message="Error saving appointment" onClose={() => back()} />
+      )}
+      {mode === ERROR_NO_INFO && (
+        <Error message="Please select an interviewer" onClose={() => back()} />
       )}
     </article>
   );
