@@ -62,16 +62,13 @@ export default function useApplicationData() {
     });
   }
 
-  const updateSpots = (appId, appointments) => {
-    const newDay =
-      state.days.filter((day) => day.appointments.includes(appId))[0].id - 1;
-    const appts = state.days.filter((day) =>
-      day.appointments.includes(appId))[0].appointments;
-    
-    const spotsRemaining = appts.filter((appt) => !appointments[appt].interview).length;
       
-
-    const dayArr = [...state.days];
+  const updateSpots = (appId, appointments) => { 
+    const newDay = state.days.filter((day) => day.appointments.includes(appId))[0].id - 1; // indicates how many spots are left after creating the appointment
+    const appts = state.days.filter((day) => day.appointments.includes(appId))[0].appointments; // contains appointments
+    const spotsRemaining = appts.filter((appt) => !appointments[appt].interview).length; // counts number of spots for specific day
+      
+    const dayArr = [...state.days]; // sets updates days array
     dayArr[newDay] = { ...dayArr[newDay], spots: spotsRemaining };
     setState((prev) => ({ ...prev, days: [...dayArr] }));
   };
