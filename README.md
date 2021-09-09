@@ -1,11 +1,9 @@
 # Interview Scheduler
 
-Interview Scheduler is a single page application created using React. Users can easily schedule appointments with mentors that are
-available on a given day. If a user no longer requires assistance or wants to make some changes, they can easily do so by editing 
-their information or by simply deleting the appointment. 
+Interview Scheduler is a single page application created using React. Users can easily and seamlessly schedule appointments with mentors that are available on a given day. If a user no longer requires assistance or wants to make some changes, they can easily do so by editing their information or by simply deleting the appointment. 
 
 An API server runs concurrently with a PostgreSQL database to deliver an app that is sure to impress
-your friends and family; maybe even some of your worst enemies.
+your friends and family; and maybe even some of your worst enemies. ;)
 
 Technical Specifications & Dependencies:
   - React
@@ -35,7 +33,7 @@ Once that has been accomplished feel free to run the following commands:
 npm install
 npm start
 ```
-These files act as our API server.
+These files will act as our API server.
 
 ## Running Jest Test Framework
 
@@ -51,4 +49,4 @@ npm run storybook
 ## Final Product 
 !["Demo of features"](https://github.com/jon-choi/scheduler/blob/master/docs/InterviewSchedulerDemo.gif?raw=true)
 
-    The included GIF demonstrates the app as a user runs through available features.
+    The included GIF demonstrates the app as a user runs through available features. Enjoy!
